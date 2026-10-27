@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peru7seal-memledger"
+version = "0.1.0"
+description = "记录每条记忆的写入时刻、来源与被覆盖关系，打印完整账本"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "peru7seal" }]
+keywords = ["cli", "analysis", "observability", "evaluation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://peru7seal.github.io"
+Repository = "https://github.com/peru7seal/memledger"
+Issues = "https://github.com/peru7seal/memledger/issues"
+
+[project.scripts]
+memledger = "memledger:main"
+
+[tool.setuptools]
+py-modules = ["memledger"]
